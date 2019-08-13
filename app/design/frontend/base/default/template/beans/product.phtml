@@ -1,0 +1,5 @@
+<?php
+    $p = Mage::registry('current_product');
+?>
+
+<div class="beans-product" beans-price="<?php echo $p->getPrice();?>"  beans-price_min="" beans-price_max="" beans-sku="<?php echo $p->getSku();?>"></div>

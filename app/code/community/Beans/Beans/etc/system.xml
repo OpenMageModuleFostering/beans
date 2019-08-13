@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Beans configuration section config
+ * @author Beans
+ */
+--> 
+<config>
+    <sections>
+        <beans translate="label" module="beans">
+            <label>Beans</label>
+            <tab>customer</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <api translate="label">
+                    <label>API keys</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>100</sort_order>
+                    <comment>
+                        <![CDATA[
+                            <div>
+                                Connect with Beans to get your public and private keys. 
+                                <b><a href="https://business.trybeans.com/register/" target="_blank">Sign up now</a></b>
+                                It's free!
+                            </div>
+                        ]]>
+                    </comment>
+                    <expanded>1</expanded>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <public translate='label'>
+                            <label>Public key</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </public>
+                        <secret translate='label'>
+                            <label>Secret key</label>
+                            <backend_model>beans_beans/backend_secret</backend_model>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </secret>
+                    </fields>
+                </api>
+                <!--
+                <settings translate="label">
+                    <label>Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>200</sort_order>
+                    <expanded>1</expanded>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <product_page translate='label'>
+                            <label>Product page plugin</label>
+                            <frontend_type>Radios</frontend_type>
+                            <source_model>beans_beans/source_style3</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </product_page>
+                        <order_page translate='label'>
+                            <label>Order page plugin</label>
+                            <frontend_type>Radios</frontend_type>
+                            <source_model>beans_beans/source_style3</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </order_page>
+                    </fields>
+                </settings>
+                -->
+            </groups>
+        </beans>
+    </sections>
+</config>

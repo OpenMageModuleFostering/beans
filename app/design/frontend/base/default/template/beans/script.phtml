@@ -1,0 +1,30 @@
+<?php
+$account = Mage::getSingleton('core/session')->getBeansAccount();
+$debit = Mage::getSingleton('core/session')->getBeansDebit();
+function _ak($account, $k, $default=null){
+    if(isset($account[$k])) {
+        echo "$k:'".$account[$k]."',";
+    }
+    else if($default !== null) {
+        echo "$k: '',";
+    }
+}
+
+?>
+<script src="//www.trybeans.com//assets/static/js/lib/1.1/shop.beans.js" type="text/javascript"></script>
+<script>
+    Beans.Shop.init({
+        address: '$shoes-atlantic',
+        is_redeem: true,
+        beans_domain: 'www.trybeans.com',
+        beans_domain_api: 'api.trybeans.com',
+        reward_page: '<?php echo Mage::getUrl('beans'); ?>',
+        login_page: '<?php echo Mage::getUrl('customer/account'); ?>',
+        account: {<?php _ak($account, 'id', '');  _ak($account, 'beans'); ?>},
+    });
+    Beans.Shop.Redemption = {
+        <?php _ak($debit, 'beans', 0);  _ak($debit, 'message', ''); ?>
+        apply: function(){Beans.Shop.utils.formPost('<?php echo Mage::getUrl('beans/index/applyRedeem'); ?>');},
+        cancel: function(){Beans.Shop.utils.formPost('<?php echo Mage::getUrl('beans/index/cancelRedeem'); ?>');},
+    };
+</script>

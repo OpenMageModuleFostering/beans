@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+        <reference name="before_body_end">
+            <block type="core/template" name="beans.script" template="beans/script.phtml"/>
+        </reference>
+    </default>
+
+    <catalog_product_view translate="label">
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/beans/base.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="product.info.addtocart">
+            <block type="core/template" name="beans.product" template="beans/product.phtml">
+                <!--<action method="unsetData"><key>cache_lifetime</key></action>-->
+            </block>
+        </reference>
+    </catalog_product_view>
+
+    <checkout_cart_index>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/beans/base.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="checkout.cart">
+            <block type="core/template" name="beans.cart" template="beans/cart.phtml">
+                <action method="setChild">
+                    <name>coupon</name>
+                    <block>checkout.cart.coupon</block>
+                </action>
+            </block>
+            <action method="setChild">
+                <name>coupon</name>
+                <block>beans.cart</block>
+            </action>
+        </reference>
+    </checkout_cart_index>
+
+    <!--
+    <customer_account_index>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>css/beans/base.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="my.account.wrapper">
+            <block type="core/template" name="beans.product" template="beans/account.phtml"/>
+        </reference>
+    </customer_account_index>
+    -->
+
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="addLink" translate="label" module="beans">
+                <name>beans.link</name>
+                <path>beans/index</path>
+                <label>Rewards Program</label>
+            </action>
+        </reference>
+    </customer_account>
+
+    <beans_index_index translate="label">
+        <label>Beans</label>
+        <update handle="customer_account"/>
+        <remove name="beans.script"/>
+
+        <!--<reference name="head">-->
+            <!--<action method="addCss">-->
+                <!--<stylesheet>css/beans/adzuki_bean.css</stylesheet>-->
+            <!--</action>-->
+        <!--</reference>-->
+
+        <reference name="after_body_start">
+            <block type="core/template" name="beans.page.script" template="beans/script.phtml"/>
+        </reference>
+
+        <reference name="my.account.wrapper">
+            <!--<block type="core/template" name="beans.page" template="customer/form/confirmation.phtml"/>-->
+            <block type="core/template" name="beans.page" template="beans/page.phtml"/>
+        </reference>
+    </beans_index_index>
+
+    <customer_logged_out>
+        <remove name="customer_account_navigation"/>
+    </customer_logged_out>
+</layout>

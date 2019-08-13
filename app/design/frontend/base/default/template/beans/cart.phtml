@@ -1,0 +1,15 @@
+<?php
+    $cart = Mage::getModel('checkout/cart')->getQuote();
+?>
+
+<?php echo $this->getChildHtml('coupon'); ?>
+
+<form id="discount-beans-form" action="" method="post">
+    <div class="discount">
+        <h2><?php echo $this->__('Rewards Program') ?></h2>
+        <div class="discount-form">
+            <div class="beans-cart" beans-btn-class="button" beans-cart_total="<?php echo $cart->getSubtotal(); ?>">
+            </div>
+        </div>
+    </div>
+</form>

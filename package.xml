@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Beans</name>
+    <version>0.9.0</version>
+    <stability>alpha</stability>
+    <license>MIT</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Beans Magento</summary>
+    <description>Reward your customers for performing actions that are strategically important to your business.&#xD;
+</description>
+    <notes>Please report bug to hello@trybeans.com</notes>
+    <authors><author><name>Beans</name><user>Beans</user><email>hello@trybeans.com</email></author></authors>
+    <date>2017-02-02</date>
+    <time>18:26:31</time>
+    <contents><target name="magecommunity"><dir name="Beans"><dir name="Beans"><dir name="Helper"><file name="Data.php" hash="a9a00fe446688feb279d16ff17d21144"/></dir><dir name="Model"><dir name="Backend"><file name="Secret.php" hash="3c01ce4205a8af68039124bd2fb6992e"/></dir><file name="Observer.php" hash="ca70a813dffd2b8af2ffd177fcd67ddc"/><dir name="Source"><file name="Style3.php" hash="bde6e8b792d3a8fa95dde60d3444719f"/></dir></dir><dir name="controllers"><file name="IndexController.php" hash="84d77c4940cced6ac80e365ec005561d"/></dir><dir name="etc"><file name="adminhtml.xml" hash="92abad83b1ebfacc7e1f2f8c36a50ebd"/><file name="config.xml" hash="0ce5e3c73a54d4f2ba73351cb061ed74"/><file name="system.xml" hash="7fc558c6d0817da65ef19d35b0b2bd29"/></dir><file name=".DS_Store" hash="f774b2bbf8278e15699fc83e811172b8"/></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="beans_beans.xml" hash="d91eff36f45d4e45ecd3c9623e4c950b"/></dir><dir name="template"><dir name="beans"><file name="account.phtml" hash="bf04287e1e7e0ac9973ab8af7151f82f"/><file name="cart.phtml" hash="98ed4de2eed4503404fd3bce6fbb3fa1"/><file name="page.phtml" hash="bc30c2d8ece38c14b80a97c6c66d30ad"/><file name="product.phtml" hash="92028387aceb6d215add04a8f1035bb2"/><file name="script.phtml" hash="fd697737b47dfaad69b284f0668a8f79"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Beans_Beans.xml" hash="432484db600f5b8350d1935823050272"/></dir></target><target name="magelib"><dir name="Beans"><file name="Beans.php" hash="7e332b228e55af3196ee1e93d85e324d"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="beans"><file name="_reset.css" hash="ec00e461beb767f64acc73a8ae32ff06"/><file name="adzuki_bean.css" hash="cf8cf4aba04294dba6d1b58073189a81"/><file name="base.css" hash="e15c90a3579897e02af5363519050f03"/><file name="black_bean.css" hash="90d3393d9e98258cfe876b3ef517cad2"/><file name="white_bean.css" hash="2e45abc49278da05d1ce8312f1f5f39d"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.5.0</min><max>5.6.30</max></php><extension><name>curl</name><min/><max/></extension><extension><name>json</name><min/><max/></extension></required></dependencies>
+</package>

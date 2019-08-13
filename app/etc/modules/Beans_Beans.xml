@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Beans_Beans>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Sales/>
+                <Mage_SalesRule/>
+                <Mage_Catalog/>
+                <Mage_Checkout/>
+                <Mage_Customer/>
+                <Mage_Adminhtml/>
+            </depends>
+        </Beans_Beans>
+    </modules>
+</config>
