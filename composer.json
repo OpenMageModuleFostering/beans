@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Beans",
+    "name": "OpenMageModuleFostering\/Beans",
     "type": "magento-module",
     "license": "MIT",
     "homepage": "",
     "description": "Beans Magento",
     "authors": [
-    {
-        "name": "Beans",
-        "email": "hello@trybeans.com"
-    }
-],
+        {
+            "name": "Beans",
+            "email": "hello@trybeans.com"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
